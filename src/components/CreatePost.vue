@@ -36,22 +36,22 @@
         },
         methods: {
             goHome() {
-                this.$router.push('/')
+                this.$router.push('/');
             },
             addNewPost() {
-                let id = this.$store.state.posts.length + 1;
-                let createdAt = new Date ;
+                let indexLastPost = this.$store.state.posts.length - 1;
+                let id = this.$store.state.posts[indexLastPost].id + 1;
+                let createdAt = new Date().toISOString();
                 let newPost = {
-                    id: id,
+                    id,
                     title: this.title,
                     description: this.description,
                     claps: 0,
-                    createdAt: createdAt.toISOString(),
+                    createdAt,
                     updateAt: '',
                     userId: 1
                 };
-                this.$store.commit('ADD_NEW_POST', newPost);
-                this.$router.push('/')
+                this.$store.dispatch('addNewPost', newPost);
             }
         },
         name: "ChangePost"

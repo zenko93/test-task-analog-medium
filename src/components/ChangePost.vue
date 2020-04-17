@@ -39,14 +39,12 @@
                 this.$router.push('/')
             },
             saveChanges() {
-                let updateDate = new Date;
+                let updateAt = new Date().toISOString();
                 this.$store.dispatch('changePost', {
                     title: this.title,
                     description: this.description,
-                    updateAt: updateDate.toISOString()
+                    updateAt
                 });
-                this.$store.dispatch('getPosts');
-                this.$router.push('/')
             }
         },
         name: "ChangePost"

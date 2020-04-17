@@ -8,6 +8,15 @@
 
         <template slot="end">
             <b-navbar-item tag="div">
+                <div v-if="isMainPage" class="is-right mr">
+                    <button class="button mr is-light"
+                            @click="mSortByNew()">
+                        <span class="icon">
+                          <i :class="[sortByNew ? 'fas fa-chevron-down' : 'fas fa-chevron-up']"></i>
+                        </span>
+                        <span>Сначала {{sortByNew ? 'новые' : 'старые'}}</span>
+                    </button>
+                </div>
                 <div v-if="userRole === 'writer'" class="is-right mr">
                     <button class="button mr is-light"
                             @click="createPost()">
@@ -43,18 +52,26 @@
         name: "NavBar",
         computed: {
             ...mapState({
-                user: state => state.user
+                user: state => state.user,
+                sortByNew: state => state.sortByNew
             }),
             ...mapGetters([
                 'userRole'
-            ])
+            ]),
+            isMainPage() {
+                return this.$route.path === '/'
+            }
         },
         methods: {
             goHome() {
-                this.$router.push('/');
+                if (this.$route.path !== '/') {
+                    this.$router.push('/');
+                }
             },
             goLogin() {
-                this.$router.push('/login');
+                if (this.$route.path !== '/login'){
+                    this.$router.push('/login');
+                }
             },
             logOut() {
                 this.$store.commit('SET_USER', null);
@@ -63,7 +80,12 @@
                 }
             },
             createPost() {
-                this.$router.push('/create-post');
+                if (this.$route.path !== '/create-post'){
+                    this.$router.push('/create-post');
+                }
+            },
+            mSortByNew() {
+                this.$store.commit('SORT_BY_NEW', !this.sortByNew)
             }
         }
     }
@@ -71,6 +93,6 @@
 
 <style scoped>
     .mr {
-        margin-right: 16px;
+        margin-right: 8px;
     }
 </style>

@@ -11,13 +11,14 @@ export default new Vuex.Store ({
         posts: [],
         post: null,
         user: null,
-        hasError: false
+        hasError: false,
+        sortByNew: false
     },
     mutations: {
-        GET_POSTS(state, payload) {
+        SET_POSTS(state, payload) {
             state.posts = payload
         },
-        GET_POST(state, payload) {
+        SET_POST(state, payload) {
             state.post = payload
         },
         SET_USER(state, payload) {
@@ -30,17 +31,27 @@ export default new Vuex.Store ({
             state.posts.splice(index, 1)
         },
         ADD_NEW_POST(state, newPost) {
-            // Vue.set(state.posts, newPost.id, newPost)
             state.posts.push(newPost)
-        }
+        },
+        ADD_CLAPS(state, index) {
+            state.posts[index].claps += 1;
+        },
+        SORT_BY_NEW(state, payload) {
+            state.sortByNew = payload;
+        },
     },
     actions: {
         getPosts({commit}) {
             axios
                 .get('http://localhost:3000/posts')
                 .then(response => {
-                    commit('GET_POSTS', response.data);
+                    if(response.status === 200) {
+                        commit('SET_POSTS', response.data);
+                    } else{
+                        throw new Error('Ошибка рендеринг постов');
+                    }
                 })
+                .catch(error => console.error(error))
         },
         authUser({commit}, {email, password}) {
             axios
@@ -59,27 +70,54 @@ export default new Vuex.Store ({
             let id = state.post.id;
             axios
                 .patch(`http://localhost:3000/posts/${id}`,{title, description, updateAt})
+                .then(response => {
+                    if(response.status === 200) {
+                        router.push('/')
+                    } else{
+                        throw new Error('Ошибка изменения поста');
+                    }
+                })
+                .catch(error => console.error(error))
         },
 
-        deletePost({state}, id) {
+        deletePost({state, commit}, id) {
             axios
                 .delete(`http://localhost:3000/posts/${id}`)
                 .then(response => {
                     if(response.status === 200) {
-                        state.posts.find((post, index) => post.id === id ? state.posts.splice(index, 1)  : null)
-                        // state.posts.find(function(post, index) {
-                        //     console.log(post)
-                        //     console.log(state.posts)
-                        //     if(post.id === id) {
-                        //         commit('DELETE_POST', index)
-                        //     }
-                        // })
+                        const index = state.posts.findIndex(post => post.id === id);
+                        commit('DELETE_POST', index);
+                    } else{
+                        throw new Error('Ошибка удаления поста');
                     }
                 })
+                .catch(error => console.error(error))
         },
-        countClaps(context, {id , claps}, ) {
+        countClaps({commit, state}, {id , claps}, ) {
             axios
                 .patch(`http://localhost:3000/posts/${id}`,{claps})
+                .then(response => {
+                    if(response.status === 200) {
+                        const index = state.posts.findIndex(post => post.id === id);
+                        commit('ADD_CLAPS', index)
+                    } else{
+                        throw new Error('Ошибка хлопков');
+                    }
+                })
+                .catch(error => console.error(error))
+        },
+        addNewPost({commit}, post) {
+            axios
+                .post(`http://localhost:3000/posts`, post)
+                .then(response => {
+                    if(response.status === 201) {
+                        commit('ADD_NEW_POST', post);
+                        router.push('/');
+                    } else{
+                        throw new Error('Ошибка добавления новго поста');
+                    }
+                })
+                .catch(error => console.error(error))
         },
     },
     getters: {
@@ -88,6 +126,9 @@ export default new Vuex.Store ({
                 return state.user.role
             }
             return "guest";
+        },
+        reversedPosts: state => {
+            return [...state.posts].reverse();
         }
     }
 })

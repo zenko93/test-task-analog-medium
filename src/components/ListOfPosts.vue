@@ -1,7 +1,7 @@
 <template>
     <div class="columns is-mobile is-centered">
         <div class="column is-half">
-            <div class="card mt" v-for="post in paginatedUsers" :key="post.id" :id="post.id">
+            <div class="card mt" v-for="post in paginatedPosts" :key="post.id" :id="post.id">
                 <div class="card-content">
                     <p class="title">
                         {{ post.title }}
@@ -80,30 +80,33 @@
                 size: '',
                 isSimple: false,
                 prevIcon: 'chevron-left',
-                nextIcon: 'chevron-right'
+                nextIcon: 'chevron-right',
             }
         },
         computed: {
             ...mapState({
                 posts: state => state.posts,
-                postById: state => state.postById,
-                user: state => state.user
+                sortByNew: state => state.sortByNew
             }),
             ...mapGetters([
                 'userRole',
+                'reversedPosts'
             ]),
             total() {
                 return this.posts.length
             },
-            paginatedUsers() {
+            paginatedPosts() {
                 let from = (this.current - 1) * this.perPage;
                 let to = from + this.perPage;
-                return this.posts.slice(from , to);
+                if (this.sortByNew) {
+                    return this.reversedPosts.slice(from, to);
+                }
+                return this.posts.slice(from, to);
             }
         },
         methods: {
             passTimeSinceUpdate(post) {
-                let oneDay = 1000*60*60*24;
+                let oneDay = 1000 * 60 * 60 * 24;
                 let currentDate = new Date;
                 let creationDate = new Date(post.createdAt);
                 let updateDate = new Date(post.updateAt);
@@ -124,7 +127,7 @@
             },
 
             changePost(post) {
-                this.$store.commit('GET_POST', post);
+                this.$store.commit('SET_POST', post);
                 this.$router.push(`/change-post/${post.id}`);
             },
 
@@ -135,7 +138,7 @@
             countClaps(post) {
                 this.$store.dispatch('countClaps', {
                     id: post.id,
-                    claps: ++post.claps
+                    claps: post.claps + 1
                 });
             }
         },
