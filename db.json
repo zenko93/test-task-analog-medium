@@ -1,0 +1,240 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "login": "writer@mail.com",
+      "password": 123456,
+      "role": "writer"
+    },
+    {
+      "id": 2,
+      "login": "reader@mail.com",
+      "password": 123456,
+      "role": "reader"
+    },
+    {
+      "id": 5,
+      "login": "writer@mail.com",
+      "password": 123456,
+      "role": "writer"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Lorem1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2020-03-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Lorem2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2020-02-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "title": "Lorem3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2020-03-18T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "title": "Lorem4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2020-01-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "title": "Lorem5",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2020-01-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "title": "Lorem6",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2020-01-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 7,
+      "title": "Lorem7",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2020-01-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 8,
+      "title": "Lorem8",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 9,
+      "title": "Lorem9",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 10,
+      "title": "Lorem10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 11,
+      "title": "Lorem11",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 12,
+      "title": "Lorem12",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 13,
+      "title": "Lorem13",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 14,
+      "title": "Lorem14",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 15,
+      "title": "Lorem15",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 16,
+      "title": "Lorem16",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 17,
+      "title": "Lorem17",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 18,
+      "title": "Lorem18",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 19,
+      "title": "Lorem19",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 20,
+      "title": "Lorem20",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 21,
+      "title": "Lorem21",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 22,
+      "title": "Lorem22",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 23,
+      "title": "Lorem23",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 24,
+      "title": "Lorem24",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos est excepturi, iusto non quidem voluptates. Consectetur dolorum, ea eius illo odio officia quis, soluta sunt totam vel, voluptate voluptatem?",
+      "claps": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
+      "userId": 1
+    }
+  ]
+}

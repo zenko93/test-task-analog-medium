@@ -9,16 +9,7 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
+### Compiles for json-server
 ```
-npm run build
+json-server db.json
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
